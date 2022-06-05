@@ -31,7 +31,7 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath) 
 // Unload driver routine
 NTSTATUS DriverUnload(PDRIVER_OBJECT DriverObject) {
 	UNREFERENCED_PARAMETER(DriverObject);
-	KdPrintEx(L"Called DriverUnload routine\n");
+	KdPrintEx((DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, L"Called DriverUnload routine\n"));
 
 	return STATUS_SUCCESS;
 }
